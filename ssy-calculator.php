@@ -25,7 +25,10 @@
 		@include box-sizing(border-box);}
      .text-white{
         font-size:20px;
-     }   
+     }
+	 h5{
+		color:white;
+	 }   
 </style>
 <body>
 	<h1 class="text">Sukanya Samriddhi Yojana Calculator</h1>
@@ -57,7 +60,7 @@
 
 			$maturity = round($amount, 2);
 
-			echo "<b>Maturity Value:</b> ".$maturity;
+			echo "<h5>Maturity Value: ".$maturity."</h5>";
 		}
 	?>
 	</form>
