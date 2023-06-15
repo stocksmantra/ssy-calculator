@@ -1,84 +1,222 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,minimum-scale=1,initial-scale=1, maximum-scale=2.0, user-scalable=yes">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Sukanya Samriddhi Yojana Calculator</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
 </head>
 <style>
-     body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: hsl(281, 88%, 67%);
-  color: #333;
-}
-  form {
-  box-sizing: border-box;
-  max-width: 400px;
-  padding: 2rem;
-  border-radius: 1rem;
-  background-color: hsl(273, 50%, 41%);
-  border: 4px solid hsl(0, 0%, 90%);
-  margin-left:28em;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  font-size:17px;
-}
-
-input[type="number"] {
-  display: block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  border: 2px solid #333;
-  background-color: white;
-  border-radius: 0.25rem;
-  margin-bottom: 1rem;
-}
-
-button {
-  font: 1.20rem sans-serif;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.60rem 1.15rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-h1{
-    margin-top:-25px;
-  font-weight: bold;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-   }
-   h3{
-    color:white;
-   }
+  body{
+    background-color:rgb(188, 188, 243);
+  }
 </style>
-<body>
-  <!-- <h1>SSY Calculator</h1> -->
-  <form id="ssy-form" class="mt-5">
-    <h1 class="text-white">SSY Calculator</h1><br>
-    <label for="age" class="text-white">Age of Girl Child:</label>
-    <input type="number" id="age" name="age" min="0" max="10" required>
-    <br>
-    <label for="yearly-deposit"class="text-white">Yearly Deposit Amount (₹):</label>
-    <input type="number" id="yearly-deposit" name="yearly-deposit" min="250" max="150000" required>
-    <br>
-    <label for="interest-rate"class="text-white">Interest Rate (%):</label>
-    <input type="number" id="interest-rate" name="interest-rate" value="7.6" step="0.1" required>
-    <br>
-    <button type="submit">Calculate Maturity Amount</button>
-    <div id="results"></div>
-  </form>
 
-  <script src="ssy-calculator.js"></script>
+<body>
+  <script type="text/javascript" src="https://static.pbcdn.in/cdn/js/jquery-3.6.0.min.js"></script>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
+  <link rel="stylesheet" rel="preload" as="style"
+    href="https://static.pbcdn.in/cdn/css/style.min_common_version1.1.css?v=529"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+
+        <link href="https://static.pbcdn.in/cdn/css/investment/investment_v8.css?v=529" rel='stylesheet'
+          type='text/css'>
+
+        <link rel="preload" href="https://static.pbcdn.in/cdn/css/review-slide.css??v=529" as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+        <script type="text/javascript">
+          var ROOTURL = "", healthUrlRoot = "", termCounrtyUrl = "", langSeg = "", isLanguage = window.location.href.indexOf("-in/"); if (isLanguage > -1) { var pathname = new URL(window.location.href).pathname, lan = pathname.split("/"); langSeg = lan[1] + "/" } ROOTURL = "https://www.policybazaar.com/", healthUrlRoot = "https://health.policybazaar.com/", investmentUrlRoot = "https://investmentlife.policybazaar.com/", termCounrtyUrl = "https://termcjapi.policybazaar.com/", termUrl = "https://termlife.policybazaar.com/", carUrl = "https://ci.policybazaar.com/", twUrl = "https://twowheeler.policybazaar.com/", commercialVehicleUrl = "https://cv.policybazaar.com/"; askPBUrlRoot = 'https://www.policybazaar.com/askpb/'; var cjProcessUrl = ROOTURL + "policybazzar-home/cj-process.php", cjFormContentUrl = ROOTURL + "policybazzar-home/cj-form-and-content.php", cjFormContentUrlCar = ROOTURL + "policybazzar-home/cj-form-and-content-car.php", cjProcessUrlHealth = ROOTURL + "policybazzar-home/cj-process-health.php", cjProcessUrlHealthFamily = ROOTURL + "policybazzar-home/cj-process-health.php", cjFormContentUrlHealth = ROOTURL + "policybazzar-home/cj-form-and-content-health.php", healthUrlIsPED = healthUrlRoot + "illness", healthUrlQuote = healthUrlRoot + "quotes", serviceUrlRoot = ROOTURL + "services/", carTrackingApiUrl = carUrl + "MVCController/prequote/InsertCustomerBehaviourTracking", twTrackingApiUrl = twUrl + "APILog/PreQuote/InsertCustomerBehaviourTracking", cjFormContentUrlTwowheeler = ROOTURL + "policybazzar-home/cj-form-and-content-twowheeler.php", healthCoronaUrl = "https://pbhealth.policybazaar.com/", healthCoronaUrlQuote = healthCoronaUrl + "quotes", objLocalStorage = "", localStorageName = "pbStorage", lsName = "", lsEmailID = "", lsDateOfBirth = "", lsGender = 1, formVersion = 1, CDN_IMG_BASEURL = 'https://static.pbcdn.in/cdn/images/';
+        </script> <input type="hidden" data-title="child plan" data-name="childpage" id="passed_pid" value="" />
+        <div class="grid">
+          <div class="block_content_wrapper_firstfold">
+
+            <!--Breadcrumb-->
+            <div class="clear"></div>
+            <div class="grid contentSection sticky_widget">
+              <div class="leftSection" id="investment_newcj_article_leftpanel">
+
+                <div class="block_content_wrapper">
+                  <div class="sukanyaCalculator">
+                    <div class="smy_title">
+                      <h1 id="ssy-calculator">Sukanya Samriddhi Yojana Calculator</h1>
+                      <span class="subheading">Latest SSY Interest Rate = 7.6%</span>
+                    </div>
+                    <div class="sukanyaCalculator_wrapper">
+                      <div class="left">
+                        <div class="cost action">
+                          <div class="title">
+                            <p>Yearly Investment</p>
+                            <span>You can invest maximum upto ₹1,50,000</span>
+                            <div class="sukanya_scrollAmt iconleft"><i class="rupee_sukanya">₹</i> <input type="text"
+                                id="investamount" value="250" pattern="[0-9]*" inputmode="numeric" maxlength="8"
+                                class="inputBox" placeholder="Amount" /></div>
+                          </div>
+                          <div class="sliderBox">
+                            <div id="investamount_slider" class="uiSlider"></div>
+                            <div style="clear: both;"></div>
+                          </div>
+                        </div>
+                        <!-- end box 1-->
+                        <div class="cost action">
+                          <div class="title">
+                            <p>Girl's Age</p>
+                            <span>Maximum age should be 10 years</span>
+                            <div class="sukanya_scrollAmt"><i class="year_sukanya">Yrs</i> <input type="text"
+                                id="girlage" value="1" pattern="[0-9]*" inputmode="numeric" maxlength="8"
+                                class="inputBox" placeholder="Age" /></div>
+                          </div>
+                          <div class="sliderBox">
+                            <div id="girlage_slider" class="uiSlider"></div>
+                            <div style="clear: both;"></div>
+                          </div>
+                        </div>
+                        <!-- end box 2-->
+                        <div class="cost action">
+                          <div class="title">
+                            <p>Start Year</p>
+                            <span>Investment term is 21 years</span>
+                            <div class="sukanya_scrollAmt"><input type="text" id="startyear" value="2020"
+                                pattern="[0-9]*" inputmode="numeric" maxlength="8" class="inputBox"
+                                placeholder="Year" /></div>
+                          </div>
+                          <div class="sliderBox">
+                            <div id="startyear_slider" class="uiSlider"></div>
+                            <div style="clear: both;"></div>
+                          </div>
+                        </div>
+                        <!-- end box 3-->
+                      </div>
+                      <div class="right">
+                        <div class="chart_title">
+                          <div class="investment">Total Investment</div>
+                          <div class="intrest">Total Interest</div>
+                        </div>
+                        <div id="donutchart"></div>
+                      </div>
+                    </div>
+                    <div class="sukanyaCalculator_wrapper result">
+                      <div class="left flexbox">
+                        <div class="title wd25"><span>Total Investment</span>
+                          <p id="totalInv" class="amt_inr"></p>
+                        </div>
+                        <div class="title wd25"><span>Total Interest</span>
+                          <p id="totalInstrest" class="amt_inr"></p>
+                        </div>
+                        <div class="title wd25"><span>Maturity Year</span>
+                          <p id="maturity"></p>
+                        </div>
+                        <div class="title wd25"><span>Maturity Value</span>
+                          <p id="maturity_value" class="amt_inr"></p>
+                          <div class="youget">Amount you will get</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        <link href="https://static.pbcdn.in/cdn/css/jquery.ui.css?v=529" rel='stylesheet' type='text/css'>
+
+        <script>
+          setTimeout(function () {
+            if (window.addEventListener) {
+              window.addEventListener("load", downloadJSAtOnload('https://static.pbcdn.in/cdn/js/jquery-ui-combine.js'), false);
+              window.addEventListener("load", downloadJSAtOnload('https://www.gstatic.com/charts/loader.js'), false);
+            }
+            else if (window.attachEvent) {
+              window.attachEvent("onload", downloadJSAtOnload('https://static.pbcdn.in/cdn/js/jquery-ui-combine.js'));
+              window.attachEvent("onload", downloadJSAtOnload('https://www.gstatic.com/charts/loader.js'));
+            }
+            else {
+              window.onload = downloadJSAtOnload('https://static.pbcdn.in/cdn/js/jquery-ui-combine.js');
+              window.onload = downloadJSAtOnload('https://www.gstatic.com/charts/loader.js');
+            }
+            setTimeout(function () {
+              try {
+                $("#investamount_slider").slider({
+                  range: "min",
+                  value: 250,
+                  min: 250,
+                  step: 250,
+                  max: 150000,
+                  slide: function (event, ui) {
+                    $("#investamount").val(ui.value);
+                    $("#investamount").val(currencyConvert(ui.value)).show();
+                    sukankya_invest_amt_update = ui.value;
+                    calculate();
+                  }
+                });
+
+
+                $("#girlage_slider").slider({
+                  range: "min",
+                  value: 5,
+                  min: 1,
+                  max: 10,
+                  step: 1,
+
+                  slide: function (event, ui) {
+                    $("#girlage").val(ui.value);
+
+                  }
+                });
+
+                $("#startyear_slider").slider({
+                  range: "min",
+                  min: 2015,
+                  max: 2030,
+                  step: 1,
+                  value: curryear,
+                  slide: function (event, ui) {
+                    $("#startyear").val(ui.value);
+                    $("#maturity").html(ui.value + 21);
+                  }
+                });
+
+
+                calculate();
+              } catch (e) { }
+            }, 1500);
+
+
+
+
+          }, 2000);
+        </script>
+
+        <script defer="" type="text/javascript"
+          src="https://static.pbcdn.in/cdn/js/bu/investment_lib_v8.js?v=529"></script>
+
+  <script defer="" type="text/javascript" src="slick.min.js"></script>
+
+  <script type="text/javascript">
+    function downloadJSAtOnload(filepath) {
+      var element = document.createElement("script");
+      element.src = filepath;
+      document.body.appendChild(element);
+    }
+    if (window.addEventListener) {
+      window.addEventListener("load", downloadJSAtOnload(
+        'https://static.pbcdn.in/cdn/js/sticky.js?v=529'), false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", downloadJSAtOnload(
+        'https://static.pbcdn.in/cdn/js/sticky.js?v=529'));
+    } else {
+      window.onload = downloadJSAtOnload('https://static.pbcdn.in/cdn/js/sticky.js?v=529');
+    }
+  </script>
+
+    </section>
 </body>
 
 </html>
