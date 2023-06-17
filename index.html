@@ -8,35 +8,33 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Sukanya Samriddhi Yojana Calculator</title>
-
+  <link rel="stylesheet" href="investment.css">
+  <link rel="stylesheet" href="style.min.css">
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript">
+    var ROOTURL = "", healthUrlRoot = "", termCounrtyUrl = "", langSeg = "", isLanguage = window.location.href.indexOf("-in/"); if (isLanguage > -1) { var pathname = new URL(window.location.href).pathname, lan = pathname.split("/"); langSeg = lan[1] + "/" } ROOTURL = "https://www.policybazaar.com/", healthUrlRoot = "https://health.policybazaar.com/", investmentUrlRoot = "https://investmentlife.policybazaar.com/", termCounrtyUrl = "https://termcjapi.policybazaar.com/", termUrl = "https://termlife.policybazaar.com/", carUrl = "https://ci.policybazaar.com/", twUrl = "https://twowheeler.policybazaar.com/", commercialVehicleUrl = "https://cv.policybazaar.com/"; askPBUrlRoot = 'https://www.policybazaar.com/askpb/'; var cjProcessUrl = ROOTURL + "policybazzar-home/cj-process.php", cjFormContentUrl = ROOTURL + "policybazzar-home/cj-form-and-content.php", cjFormContentUrlCar = ROOTURL + "policybazzar-home/cj-form-and-content-car.php", cjProcessUrlHealth = ROOTURL + "policybazzar-home/cj-process-health.php", cjProcessUrlHealthFamily = ROOTURL + "policybazzar-home/cj-process-health.php", cjFormContentUrlHealth = ROOTURL + "policybazzar-home/cj-form-and-content-health.php", healthUrlIsPED = healthUrlRoot + "illness", healthUrlQuote = healthUrlRoot + "quotes", serviceUrlRoot = ROOTURL + "services/", carTrackingApiUrl = carUrl + "MVCController/prequote/InsertCustomerBehaviourTracking", twTrackingApiUrl = twUrl + "APILog/PreQuote/InsertCustomerBehaviourTracking", cjFormContentUrlTwowheeler = ROOTURL + "policybazzar-home/cj-form-and-content-twowheeler.php", healthCoronaUrl = "https://pbhealth.policybazaar.com/", healthCoronaUrlQuote = healthCoronaUrl + "quotes", objLocalStorage = "", localStorageName = "pbStorage", lsName = "", lsEmailID = "", lsDateOfBirth = "", lsGender = 1, formVersion = 1, CDN_IMG_BASEURL = 'https://static.pbcdn.in/cdn/images/';
+  </script>
 </head>
 <style>
   body{
     background-color:rgb(188, 188, 243);
   }
+  .block_content_wrapper{
+    margin-top:0.3em;
+  }
+  .block_content_wrapper_firstfold{
+    margin-left:180px;
+  }
+  .flexbox{
+    margin-left:180px;
+  }
 </style>
 
 <body>
-  <script type="text/javascript" src="https://static.pbcdn.in/cdn/js/jquery-3.6.0.min.js"></script>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10">
-  <link rel="stylesheet" rel="preload" as="style"
-    href="https://static.pbcdn.in/cdn/css/style.min_common_version1.1.css?v=529"
-    onload="this.onload=null;this.rel='stylesheet'">
-
-
-        <link href="https://static.pbcdn.in/cdn/css/investment/investment_v8.css?v=529" rel='stylesheet'
-          type='text/css'>
-
-        <link rel="preload" href="https://static.pbcdn.in/cdn/css/review-slide.css??v=529" as="style"
-          onload="this.onload=null;this.rel='stylesheet'">
-        <script type="text/javascript">
-          var ROOTURL = "", healthUrlRoot = "", termCounrtyUrl = "", langSeg = "", isLanguage = window.location.href.indexOf("-in/"); if (isLanguage > -1) { var pathname = new URL(window.location.href).pathname, lan = pathname.split("/"); langSeg = lan[1] + "/" } ROOTURL = "https://www.policybazaar.com/", healthUrlRoot = "https://health.policybazaar.com/", investmentUrlRoot = "https://investmentlife.policybazaar.com/", termCounrtyUrl = "https://termcjapi.policybazaar.com/", termUrl = "https://termlife.policybazaar.com/", carUrl = "https://ci.policybazaar.com/", twUrl = "https://twowheeler.policybazaar.com/", commercialVehicleUrl = "https://cv.policybazaar.com/"; askPBUrlRoot = 'https://www.policybazaar.com/askpb/'; var cjProcessUrl = ROOTURL + "policybazzar-home/cj-process.php", cjFormContentUrl = ROOTURL + "policybazzar-home/cj-form-and-content.php", cjFormContentUrlCar = ROOTURL + "policybazzar-home/cj-form-and-content-car.php", cjProcessUrlHealth = ROOTURL + "policybazzar-home/cj-process-health.php", cjProcessUrlHealthFamily = ROOTURL + "policybazzar-home/cj-process-health.php", cjFormContentUrlHealth = ROOTURL + "policybazzar-home/cj-form-and-content-health.php", healthUrlIsPED = healthUrlRoot + "illness", healthUrlQuote = healthUrlRoot + "quotes", serviceUrlRoot = ROOTURL + "services/", carTrackingApiUrl = carUrl + "MVCController/prequote/InsertCustomerBehaviourTracking", twTrackingApiUrl = twUrl + "APILog/PreQuote/InsertCustomerBehaviourTracking", cjFormContentUrlTwowheeler = ROOTURL + "policybazzar-home/cj-form-and-content-twowheeler.php", healthCoronaUrl = "https://pbhealth.policybazaar.com/", healthCoronaUrlQuote = healthCoronaUrl + "quotes", objLocalStorage = "", localStorageName = "pbStorage", lsName = "", lsEmailID = "", lsDateOfBirth = "", lsGender = 1, formVersion = 1, CDN_IMG_BASEURL = 'https://static.pbcdn.in/cdn/images/';
-        </script> <input type="hidden" data-title="child plan" data-name="childpage" id="passed_pid" value="" />
         <div class="grid">
           <div class="block_content_wrapper_firstfold">
 
-            <!--Breadcrumb-->
             <div class="clear"></div>
             <div class="grid contentSection sticky_widget">
               <div class="leftSection" id="investment_newcj_article_leftpanel">
